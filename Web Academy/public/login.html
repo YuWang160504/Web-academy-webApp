@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <span id ="XBtn" class="close-btn">&times;</span>
+            <form>
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" required>
+
+                <div class="options">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember Me</label>
+                    </div>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                
+
+                <button id="login" type="submit" class="btn">Login</button>
+
+                <div class="register-link">
+                    Don't have an account? <a href="signup.html">Register</a>
+                </div>
+
+                <div class="social-login">
+                    <button class="google-btn">Continue with Google</button>
+                    <button class="facebook-btn">Continue with Facebook</button>
+                </div>
+            </form>
+        </div>
+
+        <img src="/images/masha.png" class="character" alt="Cartoon Character">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const XBtn = document.getElementById("XBtn");
+    
+            if (XBtn) {
+                XBtn.addEventListener("click", function () {
+                    window.location.href = "index.html"; // 
+                });
+            }
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const login = document.getElementById("login");
+
+        if (login) {
+            login.addEventListener("click", function () {
+                window.location.href = "home.html"; 
+            });
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="signup-box">
+            <h2>Register</h2>
+            <span id="getXBtn" class="close-btn">&times;</span>
+            <form id="signupForm">
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Verify your password" required>
+
+                <div class="terms-container">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the terms & conditions</label>
+                </div>
+
+                <button type="submit" id="reg" class="btn">Register</button>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login</a>
+                </div>
+            </form>
+        </div>
+
+        <img src="/images/go.png" class="character" alt="Cartoon Character">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const getXBtn = document.getElementById("getXBtn");
+    
+            if (getXBtn) {
+                getXBtn.addEventListener("click", function () {
+                    window.location.href = "index.html"; 
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const signupForm = document.getElementById("signupForm");
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirmPassword");
+            const terms = document.getElementById("terms");
+
+            signupForm.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Check if passwords match
+                if (password.value !== confirmPassword.value) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+
+                // Check if terms & conditions are accepted
+                if (!terms.checked) {
+                    alert("You must agree to the terms & conditions.");
+                    return;
+                }
+
+                // Show success message
+                alert("Registration successful!");
+
+                // Redirect to login.html after successful registration
+                window.location.href = "login.html";
+            });
+        });
+    </script>
+
+</body>
+</html>

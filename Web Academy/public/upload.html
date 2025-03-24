@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video Modal</title>
+    <link rel="stylesheet" href="/css/upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="upload-modal">
+        <div class="modal-header">
+            <p><i>Upload Videos</i></p>
+            <span id="XBtn" class="close-btn">&times;</span>
+        </div>
+
+        <div class="modal-body">
+            <div class="upload-icon">
+                <img src="/images/drag.png" alt="Upload Icon">
+            </div>
+            <p class="upload-text"><strong>Drag and drop your video files to upload!</strong></p>
+            <p class="sub-text">Your videos will be private until you publish it!</p>
+            <button class="upload-btn">Select file</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const XBtn = document.getElementById("XBtn");
+    
+            if (XBtn) {
+                XBtn.addEventListener("click", function () {
+                    window.location.href = "dashboard.html"; // 
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

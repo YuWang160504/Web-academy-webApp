@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" class="nav-logo"> 
+                </div>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-bar">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> 
+                    </button>
+                </div>
+
+                <div class="nav-left">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">ContactUs</a></li>
+                        <li><a href="public/login.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/fun.gif" alt="Book">
+            <h2>Welcome to Web Academy!</h2>
+            <p>Explore exciting courses that will help you shape your future!</p>
+            
+            <button id="getStartedBtn" class="btn">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/Technology.jpeg" alt="Technology Image">
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <h2>Explore Courses</h2>
+        <div class="course-grid">
+            <div class="course">
+                <h3>Front-End Development</h3>
+                <img src="images/fE.jpeg" alt="Front-End">
+            </div>
+            <div class="course">
+                <h3>Back-End Development</h3>
+                <img src="images/BE.jpeg" alt="Back-End">
+            </div>
+            <div class="course">
+                <h3>Frameworks</h3>
+                <img src="images/FW.jpeg" alt="Frameworks">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button> <br><br>
+        </form>
+        <div id="contact"class="contact-info">
+            <p><strong>Email:</strong> ITAcademy123.edu.bt@gmail.com</p>
+            <p><strong>Phone:</strong> +975 77645387 / 77234567</p>
+            <p><strong>Postal Code:</strong> 123-34-556</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 IT Academy. All rights reserved</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const getStartedBtn = document.getElementById("getStartedBtn");
+
+            if (getStartedBtn) {
+                getStartedBtn.addEventListener("click", function () {
+                    window.location.href = "/public/signup.html"; 
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

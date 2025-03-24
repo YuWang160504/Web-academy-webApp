@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-times"></i> 
+        </div>
+        
+        <div class="profile">
+            <img src="/images/images.jpeg" alt="Profile">
+            <p>Your Channel<br><small>Name</small></p>
+        </div>
+        <nav>
+            <ul>
+                <li><i class="fas fa-th-large"></i> Dashboard</li>
+                <li><i class="fas fa-folder"></i> Content</li>
+                <li><i class="fas fa-chart-bar"></i> Analytics</li>
+                <li><i class="fas fa-closed-captioning"></i> Subtitle</li>
+            </ul>
+        </nav>
+    </div>
+   
+    <div class="main-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Search across your channel">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-avatar">
+                <img src="/images/images.jpeg" alt="User">
+            </div>
+        </header>
+
+        <h2 class="dashboard-title">Channel Dashboard</h2>
+
+        <div class="dashboard">
+            <div class="upload-box">
+                <img src="/images/videomake.png" alt="Video Upload">
+                <p>Upload and publish a video to get started!</p>
+                <button id="ubtn" class="upload-btn">Upload Video</button>
+            </div>
+
+            <div class="analytics-box">
+                <h3>Channel Analytics</h3>
+                <p><strong>Current Subscribers</strong></p>
+                <h2>0</h2>
+                <hr>
+                <p><strong>Summary</strong><br><small>last 28 days</small></p>
+                <p><strong>Views</strong> <span>0</span></p>
+                <p><strong>Watch time (hours)</strong> <span>0.0</span></p>
+                <hr>
+                <p><strong>Top Videos</strong><br><small>last 48 hours: views</small></p>
+                <button class="analytics-btn">Go to channel Analytics</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ubtn = document.getElementById("ubtn");
+            const menuIcon = document.getElementById("menu-icon");
+    
+            if (ubtn) {
+                ubtn.addEventListener("click", function () {
+                    window.location.href = "upload.html"; // 
+                });
+            }
+    
+            if (menuIcon) {
+                menuIcon.addEventListener("click", function () {
+                    window.location.href = 'home.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

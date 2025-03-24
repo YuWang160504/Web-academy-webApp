@@ -1,0 +1,67 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #333; 
+}
+
+.upload-modal {
+    width: 700px;
+    background: white;
+    border: 1px solid black;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.modal-header p {
+    font-style: italic;
+}
+
+.close-btn {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-body {
+    background: #cfe3e3;
+    padding: 40px;
+    text-align: center;
+}
+
+.upload-icon img {
+    width: 100px;
+}
+
+.upload-text {
+    font-size: 16px;
+    margin: 15px 0 5px;
+}
+
+.sub-text {
+    font-size: 14px;
+    color: gray;
+}
+
+.upload-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+}
